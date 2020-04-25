@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class EmeraldTools implements ModInitializer
 {
+	
     public static final String MOD_ID = "emerald_tools";
 
     public static final ItemGroup EMERALD_TOOLS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "emerald_tools_group"), () -> new ItemStack(ContentInit.EMERALD_SWORD));
