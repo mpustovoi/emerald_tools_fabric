@@ -69,4 +69,10 @@ public enum ModToolMaterials implements ToolMaterial
    {
       return (Ingredient)this.repairIngredient.get();
    }
+
+@Override
+public float getMiningSpeed() {
+	// TODO Auto-generated method stub
+	return 0;
+}
 }
