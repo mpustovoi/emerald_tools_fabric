@@ -3,7 +3,8 @@ package com.kwpugh.emerald_tools.materials;
 
 import java.util.function.Supplier;
 
-import com.kwpugh.emerald_tools.init.ContentInit;
+import com.kwpugh.emerald_tools.init.ItemInit;
+
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -12,7 +13,7 @@ import net.minecraft.util.Lazy;
 public enum ModToolMaterials implements ToolMaterial
 {
 	STEEL(2, 512, 7.0F, 2.0F, 25, () -> {
-		return Ingredient.ofItems(ContentInit.STEEL_INGOT);
+		return Ingredient.ofItems(ItemInit.STEEL_INGOT);
 		}),
 	   
 	EMERALD(3, 725, 8.0F, 3.0F, 25, () -> {
@@ -20,7 +21,7 @@ public enum ModToolMaterials implements ToolMaterial
 		}),
 
 	RUBY(3, 960, 8.0F, 3.0F, 25, () -> {
-		return Ingredient.ofItems(ContentInit.RUBY);
+		return Ingredient.ofItems(ItemInit.RUBY);
 		});
 
    private final int miningLevel;
