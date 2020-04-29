@@ -19,7 +19,11 @@ public enum ModArmorMaterials implements ArmorMaterial
 	STEEL("steel", 21, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F, 0.5F, () -> {
 		return Ingredient.ofItems(ItemInit.STEEL_INGOT);
 		}),
-	   
+
+	OBSIDIAN("obsidian", 24, new int[]{2, 5, 6, 2}, 4, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F, 0.5F, () -> {
+		return Ingredient.ofItems(Items.OBSIDIAN);
+		}),
+	
 	EMERALD("emerald_", 26, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
 	    return Ingredient.ofItems(Items.EMERALD);
 		}),

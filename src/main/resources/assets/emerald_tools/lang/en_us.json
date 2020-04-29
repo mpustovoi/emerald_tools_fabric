@@ -42,5 +42,16 @@
   "item.emerald_tools.steel_leggings": "Steel Leggings",
   "item.emerald_tools.steel_boots": "Steel Boots",
      
-  "itemGroup.emerald_tools.emerald_tools_group" : "Emerald Tools & More"
+   "item.emerald_tools.obsidian_sword": "Obsidian Sword",
+  "item.emerald_tools.obsidian_pickaxe": "Obsidian Pickaxe",
+  "item.emerald_tools.obsidian_axe": "Obsidian Axe",
+  "item.emerald_tools.obsidian_shovel": "Obsidian Shovel",
+  "item.emerald_tools.obsidian_hoe": "Obsidian Hoe",
+ 
+  "item.emerald_tools.obsidian_helmet": "Obsidian Helmet",
+  "item.emerald_tools.obsidian_chestplate": "Obsidian Chestplate",
+  "item.emerald_tools.obsidian_leggings": "Obsidian Leggings",
+  "item.emerald_tools.obsidian_boots": "Obsidian Boots",
+  
+  "itemGroup.emerald_tools.emerald_tools_group" : "Easy Emerald Tools & More"
 }

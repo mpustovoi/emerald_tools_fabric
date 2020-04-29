@@ -53,6 +53,17 @@ public class ItemInit
 	public static final Item STEEL_LEGGINGS = new ModArmor(ModArmorMaterials.STEEL, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item STEEL_BOOTS = new ModArmor(ModArmorMaterials.STEEL, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));	
 	
+	public static final Item OBSIDIAN_SWORD = new ModSword(ModToolMaterials.OBSIDIAN, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_PICKAXE = new ModPickaxe(ModToolMaterials.OBSIDIAN, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_AXE = new ModAxe(ModToolMaterials.OBSIDIAN, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_SHOVEL = new ModShovel(ModToolMaterials.OBSIDIAN, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_HOE = new ModHoe(ModToolMaterials.OBSIDIAN, -2, -1.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+		
+	public static final Item OBSIDIAN_HELMET = new ModArmor(ModArmorMaterials.OBSIDIAN, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_CHESTPLATE = new ModArmor(ModArmorMaterials.OBSIDIAN, EquipmentSlot.CHEST, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_LEGGINGS = new ModArmor(ModArmorMaterials.OBSIDIAN, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_BOOTS = new ModArmor(ModArmorMaterials.OBSIDIAN, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));	
+
 	public static void registerItems()
 	{		
 		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "ruby"), RUBY);
@@ -90,7 +101,17 @@ public class ItemInit
 		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "steel_chestplate"), STEEL_CHESTPLATE);
 		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "steel_leggings"), STEEL_LEGGINGS);
 		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "steel_boots"), STEEL_BOOTS);
-	 }
-	 
+		 
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "obsidian_sword"), OBSIDIAN_SWORD);
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "obsidian_pickaxe"), OBSIDIAN_PICKAXE);
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "obsidian_axe"), OBSIDIAN_AXE);
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "obsidian_shovel"), OBSIDIAN_SHOVEL);
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "obsidian_hoe"), OBSIDIAN_HOE);
+		 
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "obsidian_helmet"), OBSIDIAN_HELMET);
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "obsidian_chestplate"), OBSIDIAN_CHESTPLATE);
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "obsidian_leggings"), OBSIDIAN_LEGGINGS);
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "obsidian_boots"), OBSIDIAN_BOOTS);
+	 }	 
 }
 
