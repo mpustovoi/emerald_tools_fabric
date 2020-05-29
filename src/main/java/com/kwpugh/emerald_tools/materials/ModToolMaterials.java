@@ -12,14 +12,14 @@ import net.minecraft.util.Lazy;
 
 public enum ModToolMaterials implements ToolMaterial
 {
-	STEEL(2, 512, 7.0F, 2.0F, 25, () -> {
+	STEEL(3, 512, 7.0F, 2.0F, 25, () -> {
 		return Ingredient.ofItems(ItemInit.STEEL_INGOT);
 		}),
 
 	OBSIDIAN(3, 650, 5.5F, 1.5F, 18, () -> {
-		return Ingredient.ofItems(ItemInit.STEEL_INGOT);
+		return Ingredient.ofItems(Items.OBSIDIAN);
 		}),
-	
+
 	EMERALD(3, 725, 8.0F, 3.0F, 25, () -> {
 		return Ingredient.ofItems(Items.EMERALD);
 		}),
