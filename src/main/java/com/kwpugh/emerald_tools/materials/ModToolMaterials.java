@@ -36,14 +36,15 @@ public enum ModToolMaterials implements ToolMaterial
    private final int enchantability;
    private final Lazy<Ingredient> repairIngredient;
 
-   private int durabilityMultiplierFromConfig = EmeraldTools.getConfig().DURABILITYMULTIPLIER.durabilityMultiplier;
+   private int toolDurabilityAdditionFromConfig = EmeraldTools.getConfig().TOOL_DURABILITY_ADDITION.toolDurabilityAddition;
+   private float toolAttackAdditionFromConfig = EmeraldTools.getConfig().TOOL_ATTACK_ADDITION.toolAttackAddition;
 	
    private ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantibility, Supplier<Ingredient> repairIngredient)
    {
       this.miningLevel = miningLevel;
-      this.itemDurability = itemDurability * durabilityMultiplierFromConfig;
+      this.itemDurability = itemDurability + toolDurabilityAdditionFromConfig;
       this.miningSpeed = miningSpeed;
-      this.attackDamage = attackDamage;
+      this.attackDamage = attackDamage + toolAttackAdditionFromConfig;
       this.enchantability = enchantibility;
       this.repairIngredient = new Lazy(repairIngredient);
    }
