@@ -1,9 +1,10 @@
 package com.kwpugh.emerald_tools.materials;
 
-
 import java.util.function.Supplier;
 
+import com.kwpugh.emerald_tools.config.EmeraldToolsConfig;
 import com.kwpugh.emerald_tools.init.ItemInit;
+import com.kwpugh.emerald_tools.EmeraldTools;
 
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
@@ -35,10 +36,12 @@ public enum ModToolMaterials implements ToolMaterial
    private final int enchantability;
    private final Lazy<Ingredient> repairIngredient;
 
+   private int durabilityMultiplierFromConfig = EmeraldTools.getConfig().DURABILITYMULTIPLIER.durabilityMultiplier;
+	
    private ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantibility, Supplier<Ingredient> repairIngredient)
    {
       this.miningLevel = miningLevel;
-      this.itemDurability = itemDurability;
+      this.itemDurability = itemDurability * durabilityMultiplierFromConfig;
       this.miningSpeed = miningSpeed;
       this.attackDamage = attackDamage;
       this.enchantability = enchantibility;

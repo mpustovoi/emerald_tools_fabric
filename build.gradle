@@ -24,7 +24,14 @@ dependencies {
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
 
-	//modCompile "me.shedaniel:RoughlyEnoughItems:4.3.13-unstable"
+	
+	//Autoconfig
+  	modCompile "me.sargunvohra.mcmods:autoconfig1u:3.2.2"
+    include "me.sargunvohra.mcmods:autoconfig1u:3.2.2"
+
+	//REI
+    //modCompile "me.shedaniel:RoughlyEnoughItems:5.2.9"
+    
 }
 
 processResources {
