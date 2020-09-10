@@ -10,7 +10,7 @@
       "item": "minecraft:stick"
     },
     "r": {
-      "item": "emerald_tools:ruby"
+      "tag": "c:rubies"
     }
   },
   "result": {

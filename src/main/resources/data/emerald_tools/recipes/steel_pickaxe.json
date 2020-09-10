@@ -10,8 +10,7 @@
       "item": "minecraft:stick"
     },
     "e": {
-      "item": "emerald_tools:steel_ingot",
-      "data": 0
+      "tag": "c:steel_ingots"
     }
   },
   "result": {
