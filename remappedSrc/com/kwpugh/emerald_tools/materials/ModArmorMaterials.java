@@ -2,6 +2,7 @@ package com.kwpugh.emerald_tools.materials;
 
 import java.util.function.Supplier;
 
+import com.kwpugh.emerald_tools.EmeraldTools;
 import com.kwpugh.emerald_tools.init.ItemInit;
 
 import net.fabricmc.api.EnvType;
@@ -32,66 +33,71 @@ public enum ModArmorMaterials implements ArmorMaterial
 	    return Ingredient.ofItems(ItemInit.RUBY);
 		});
 
-   private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-   private final String name;
-   private final int durabilityMultiplier;
-   private final int[] protectionAmounts;
-   private final int enchantability;
-   private final SoundEvent equipSound;
-   private final float toughness;
-   private final float knockbackResistance;
-   private final Lazy<Ingredient> repairIngredientSupplier;
+	private final int armorDurabilityAdditionFromConfig = EmeraldTools.getConfig().ARMOR_DURABILITY_ADDITION.armorDurabilityAddition;
+	
+	private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
+	
+	private final String name;
+	private final int durabilityMultiplier;
+	private final int[] protectionAmounts;
+	private final int enchantability;
+	private final SoundEvent equipSound;
+	private final float toughness;
+	private final float knockbackResistance;
+	private final Lazy<Ingredient> repairIngredientSupplier;
 
-   private ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> supplier)
-   {
-      this.name = name;
-      this.durabilityMultiplier = durabilityMultiplier;
-      this.protectionAmounts = protectionAmounts;
-      this.enchantability = enchantability;
-      this.equipSound = equipSound;
-      this.toughness = toughness;
-      this.knockbackResistance = knockbackResistance;
-      this.repairIngredientSupplier = new Lazy(supplier);
-   }
+   
+   
+	private ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> supplier)
+	{
+		this.name = name;
+		this.durabilityMultiplier = durabilityMultiplier + armorDurabilityAdditionFromConfig;
+		this.protectionAmounts = protectionAmounts;
+		this.enchantability = enchantability;
+		this.equipSound = equipSound;
+		this.toughness = toughness;
+		this.knockbackResistance = knockbackResistance;
+		this.repairIngredientSupplier = new Lazy(supplier);
+	}
 
-   public int getDurability(EquipmentSlot slot)
-   {
-      return BASE_DURABILITY[slot.getEntitySlotId()] * this.durabilityMultiplier;
-   }
+	public int getDurability(EquipmentSlot slot)
+	{
+		return BASE_DURABILITY[slot.getEntitySlotId()] * this.durabilityMultiplier;
+	}
 
-   public int getProtectionAmount(EquipmentSlot slot)
-   {
-      return this.protectionAmounts[slot.getEntitySlotId()];
-   }
+	public int getProtectionAmount(EquipmentSlot slot)
+	{
+		return this.protectionAmounts[slot.getEntitySlotId()];
+	}
 
-   public int getEnchantability()
-   {
-      return this.enchantability;
-   }
+	public int getEnchantability()
+	{
+		return this.enchantability;
+	}
 
-   public SoundEvent getEquipSound()
-   {
-      return this.equipSound;
-   }
+	public SoundEvent getEquipSound()
+	{
+		return this.equipSound;
+	}
 
-   public Ingredient getRepairIngredient()
-   {
-      return (Ingredient)this.repairIngredientSupplier.get();
-   }
+	public Ingredient getRepairIngredient()
+	{
+		return (Ingredient)this.repairIngredientSupplier.get();
+	}
 
-   @Environment(EnvType.CLIENT)
-   public String getName()
-   {
-      return this.name;
-   }
+	@Environment(EnvType.CLIENT)
+	public String getName()
+	{
+		return this.name;
+	}
 
-   public float getToughness()
-   {
-      return this.toughness;
-   }
+	public float getToughness()
+	{
+		return this.toughness;
+	}
 
-   public float getKnockbackResistance()
-   {
-      return this.knockbackResistance;
-   }
+	public float getKnockbackResistance()
+	{
+		return this.knockbackResistance;
+	}
 }
