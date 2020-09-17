@@ -30,7 +30,7 @@ dependencies {
     include "me.sargunvohra.mcmods:autoconfig1u:3.2.2"
 
 	//REI
-    //modCompile "me.shedaniel:RoughlyEnoughItems:5.2.9"
+    modCompile "me.shedaniel:RoughlyEnoughItems:5.4.2"
     
 }
 
