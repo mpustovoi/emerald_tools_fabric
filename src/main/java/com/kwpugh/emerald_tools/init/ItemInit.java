@@ -32,6 +32,7 @@ public class ItemInit
 	public static final Item EMERALD_BOOTS = new ModArmor(ModArmorMaterials.EMERALD, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	 	 
 	public static final Item RUBY_SWORD = new ModSword(ModToolMaterials.RUBY, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_STEEL_SWORD = new ModSword(ModToolMaterials.RUBY, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item RUBY_PICKAXE = new ModPickaxe(ModToolMaterials.RUBY, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item RUBY_AXE = new ModAxe(ModToolMaterials.RUBY, 5.0F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item RUBY_SHOVEL = new ModShovel(ModToolMaterials.RUBY, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
@@ -81,6 +82,7 @@ public class ItemInit
 		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "emerald_boots"), EMERALD_BOOTS);
 
 		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "ruby_sword"), RUBY_SWORD);
+		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "ruby_steel_sword"), RUBY_STEEL_SWORD);
 		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "ruby_pickaxe"), RUBY_PICKAXE);
 		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "ruby_axe"), RUBY_AXE);
 		 Registry.register(Registry.ITEM, new Identifier("emerald_tools", "ruby_shovel"), RUBY_SHOVEL);

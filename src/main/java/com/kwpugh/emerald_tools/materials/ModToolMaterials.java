@@ -2,7 +2,6 @@ package com.kwpugh.emerald_tools.materials;
 
 import java.util.function.Supplier;
 
-import com.kwpugh.emerald_tools.config.EmeraldToolsConfig;
 import com.kwpugh.emerald_tools.init.ItemInit;
 import com.kwpugh.emerald_tools.EmeraldTools;
 
@@ -26,6 +25,10 @@ public enum ModToolMaterials implements ToolMaterial
 		}),
 
 	RUBY(3, 960, 8.0F, 3.0F, 25, () -> {
+		return Ingredient.ofItems(ItemInit.RUBY);
+		}),
+	
+	RUBY_STEEL(3, 1102, 8.0F, 3.0F, 25, () -> {
 		return Ingredient.ofItems(ItemInit.RUBY);
 		});
 
