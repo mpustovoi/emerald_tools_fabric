@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.kwpugh.emerald_tools.EmeraldTools"
+    ],
+    "client": [
+      "com.kwpugh.emerald_tools.EmeraldToolsClient"
     ]
   },
   "mixins": [

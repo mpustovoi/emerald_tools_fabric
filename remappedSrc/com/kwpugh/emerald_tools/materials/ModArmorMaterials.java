@@ -45,9 +45,7 @@ public enum ModArmorMaterials implements ArmorMaterial
 	private final float toughness;
 	private final float knockbackResistance;
 	private final Lazy<Ingredient> repairIngredientSupplier;
-
-   
-   
+ 
 	private ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> supplier)
 	{
 		this.name = name;

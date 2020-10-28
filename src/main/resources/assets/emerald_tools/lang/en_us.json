@@ -1,5 +1,6 @@
 {
   "item.emerald_tools.emerald_sword": "Emerald Sword",
+  "item.emerald_tools.emerald_bow": "Emerald Bow",
   "item.emerald_tools.emerald_pickaxe": "Emerald Pickaxe",
   "item.emerald_tools.emerald_shovel": "Emerald Shovel",
   "item.emerald_tools.emerald_hoe": "Emerald Hoe",
@@ -16,6 +17,7 @@
   "block.emerald_tools.ruby_block": "Ruby Block",
     
   "item.emerald_tools.ruby_sword": "Ruby Sword",
+  "item.emerald_tools.ruby_bow": "Ruby Bow",
   "item.emerald_tools.ruby_steel_sword": "Ruby-Steel Sword",
   "item.emerald_tools.ruby_pickaxe": "Ruby Pickaxe",
   "item.emerald_tools.ruby_axe": "Ruby Axe",
@@ -33,6 +35,7 @@
   "block.emerald_tools.steel_block": "Steel Block",
   
   "item.emerald_tools.steel_sword": "Steel Sword",
+  "item.emerald_tools.steel_bow": "Steel Bow",
   "item.emerald_tools.steel_pickaxe": "Steel Pickaxe",
   "item.emerald_tools.steel_axe": "Steel Axe",
   "item.emerald_tools.steel_shovel": "Steel Shovel",
@@ -44,6 +47,7 @@
   "item.emerald_tools.steel_boots": "Steel Boots",
      
    "item.emerald_tools.obsidian_sword": "Obsidian Sword",
+   "item.emerald_tools.obsidian_bow": "Obsidian Bow",
   "item.emerald_tools.obsidian_pickaxe": "Obsidian Pickaxe",
   "item.emerald_tools.obsidian_axe": "Obsidian Axe",
   "item.emerald_tools.obsidian_shovel": "Obsidian Shovel",
