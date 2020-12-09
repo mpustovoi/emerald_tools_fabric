@@ -25,11 +25,11 @@ public enum ModArmorMaterials implements ArmorMaterial
 		return Ingredient.ofItems(Items.OBSIDIAN);
 		}),
 	
-	EMERALD("emerald_", 26, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
+	EMERALD("emerald", 26, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
 	    return Ingredient.ofItems(Items.EMERALD);
 		}),
 	
-	RUBY("ruby_", 29, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
+	RUBY("ruby", 29, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
 	    return Ingredient.ofItems(ItemInit.RUBY);
 		});
 

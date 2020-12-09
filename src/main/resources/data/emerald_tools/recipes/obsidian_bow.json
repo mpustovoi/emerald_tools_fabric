@@ -1,22 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " gs",
-    "g s",
-    " gs"
-  ],
-  "key": {
-    "s": {
-      "item": "minecraft:string"
-    },
-    "g": {
-        "item": "minecraft:obsidian",
-      "data": 0
-      }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:bow"
+  },
+  "addition": {
+    "item": "minecraft:obsidian"
   },
   "result": {
     "item": "emerald_tools:obsidian_bow"
   }
 }
-
-
