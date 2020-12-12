@@ -1,9 +1,17 @@
 {
   "replace": false,
   "values": [
-"emerald_tools:emerald_pickaxe",
-"emerald_tools:obsidian_pickaxe",
-"emerald_tools:ruby_pickaxe",
-"emerald_tools:steel_pickaxe"
+	"emerald_tools:emerald_pickaxe",
+	"emerald_tools:obsidian_pickaxe",
+	"emerald_tools:ruby_pickaxe",
+	"emerald_tools:steel_pickaxe",
+	"emerald_tools:emerald_paxel",
+	"emerald_tools:obsidian_paxel",
+	"emerald_tools:ruby_paxel",
+	"emerald_tools:steel_paxel",
+	"emerald_tools:emerald_hammer",
+	"emerald_tools:obsidian_hammer",
+	"emerald_tools:ruby_hammer",
+	"emerald_tools:steel_hammer"
   ]
 }

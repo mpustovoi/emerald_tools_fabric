@@ -30,10 +30,10 @@ public class AreaToolUtil
             	{              		
         			world.breakBlock(pos, true);
         			
-        			if(world.breakBlock(pos, true))
-        			{
-        				playerIn.inventory.getMainHandStack().damage(1, playerIn, player -> { });
-        			}
+//        			if(world.breakBlock(pos, true))
+//        			{
+//        				playerIn.inventory.getMainHandStack().damage(1, playerIn, player -> { });
+//        			}
                	}                             
             }
         }
