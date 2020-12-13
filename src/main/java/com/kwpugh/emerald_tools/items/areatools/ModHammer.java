@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
@@ -31,6 +32,17 @@ public class ModHammer extends PickaxeItem
 
         return true;
     }
+    
+	@Override
+	public boolean isEffectiveOn(BlockState state) 
+	{
+		if (Items.DIAMOND_PICKAXE.isEffectiveOn(state))
+		{
+			return true;
+		}
+
+		return Items.DIAMOND_PICKAXE.getMiningSpeedMultiplier(null, state) > 1.0f;
+	}
  
 	@Override
 	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
