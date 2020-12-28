@@ -27,7 +27,7 @@ public class ModHammer extends PickaxeItem
     {
         if(!playerIn.isSneaking() && playerIn.getMainHandStack().isEffectiveOn(world.getBlockState(pos)))
     	{
-        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1);
+        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1, "hammer");
         }
 
         return true;

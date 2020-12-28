@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 
 public class AreaToolUtil
 {
-    public static void attemptBreakNeighbors(World world, PlayerEntity playerIn, int radius)
+    public static void attemptBreakNeighbors(World world, PlayerEntity playerIn, int radius, String type)
     {
         if(!world.isClient)
         {
@@ -30,13 +30,31 @@ public class AreaToolUtil
             	Float hardness = state.getHardness(world, pos);
             	Block block = state.getBlock();
             	
-            	if(playerIn.isUsingEffectiveTool(state) && (hardness != -1) && (hardness < 50))
-            	{              		
-            		if(!(block instanceof BlockWithEntity) || !block.hasBlockEntity()  || !(block instanceof BlockEntityProvider))
+            	if(type == "hammer" && state.isToolRequired())
+            	{
+            		if(playerIn.isUsingEffectiveTool(state))
             		{
-            			world.breakBlock(pos, true); 
-            		}
-               	}                             
+            			if(!block.hasBlockEntity() || 
+                				!(block instanceof BlockWithEntity) || 
+                				!(block instanceof BlockEntityProvider))
+                		{
+                			world.breakBlock(pos, true); 
+                		}
+            		}          		
+            	}
+             	
+            	if(type == "excavator")
+            	{
+            		if(playerIn.isUsingEffectiveTool(state))
+            		{
+            			if(!block.hasBlockEntity() || 
+                				!(block instanceof BlockWithEntity) || 
+                				!(block instanceof BlockEntityProvider))
+                		{
+                			world.breakBlock(pos, true); 
+                		}
+            		}           		
+            	}                                  
             }
         }
     }
