@@ -22,11 +22,9 @@ public class EmeraldTools implements ModInitializer
     @Override
     public void onInitialize()
     {
-    	AutoConfig.register(EmeraldToolsConfig.class, GsonConfigSerializer::new);
-    	
+    	AutoConfig.register(EmeraldToolsConfig.class, GsonConfigSerializer::new);   	
     	BlockInit.registerBlocks();
     	BlockInit.registerBlockItems();
-    	
     	ItemInit.registerItems();
     }
     
