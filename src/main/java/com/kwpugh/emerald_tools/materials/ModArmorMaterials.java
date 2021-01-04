@@ -33,7 +33,8 @@ public enum ModArmorMaterials implements ArmorMaterial
 	    return Ingredient.ofItems(ItemInit.RUBY);
 		});
 
-	private final int armorDurabilityAdditionFromConfig = EmeraldTools.getConfig().ARMOR_DURABILITY_ADDITION.armorDurabilityAddition;
+	// From config
+	private final int armorDurabilityAdditionFromConfig = EmeraldTools.CONFIG.GENERAL.armorDurabilityAddition;
 	
 	private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
 	
@@ -55,7 +56,7 @@ public enum ModArmorMaterials implements ArmorMaterial
 		this.equipSound = equipSound;
 		this.toughness = toughness;
 		this.knockbackResistance = knockbackResistance;
-		this.repairIngredientSupplier = new Lazy(supplier);
+		this.repairIngredientSupplier = new Lazy<Ingredient>(supplier);
 	}
 
 	public int getDurability(EquipmentSlot slot)

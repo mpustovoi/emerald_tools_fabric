@@ -3,6 +3,7 @@ package com.kwpugh.emerald_tools.items.areatools;
 import java.util.List;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -22,12 +23,15 @@ public class ModHammer extends PickaxeItem
 		super(material, attackDamage, attackSpeed, settings);
 	}
 
+	boolean obsidianFlag;
+	
     @Override
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity playerIn)
     {
         if(!playerIn.isSneaking() && playerIn.getMainHandStack().isEffectiveOn(world.getBlockState(pos)))
     	{
-        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1, "hammer");
+        	obsidianFlag = (state.getBlock() == Blocks.OBSIDIAN || state.getBlock() == Blocks.CRYING_OBSIDIAN) ? true : false;
+        	AreaToolUtil.attemptBreakNeighbors(world, playerIn, 1, "hammer", obsidianFlag);
         }
 
         return true;

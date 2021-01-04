@@ -18,10 +18,11 @@ import net.minecraft.world.World;
 
 public class AreaToolUtil
 {
-    public static void attemptBreakNeighbors(World world, PlayerEntity playerIn, int radius, String type)
+    public static void attemptBreakNeighbors(World world, PlayerEntity playerIn, int radius, String type, boolean obsidian)
     {
         if(!world.isClient)
         {
+        	boolean okToBreak;
             List<BlockPos> targetBlocks = calcRayTrace(world, playerIn, radius);
             
             for(BlockPos pos : targetBlocks)
@@ -29,8 +30,9 @@ public class AreaToolUtil
             	BlockState state = world.getBlockState(pos);
             	Float hardness = state.getHardness(world, pos);
             	Block block = state.getBlock();
+            	okToBreak = obsidian ? true : hardness < 50.0F;
             	
-            	if(type == "hammer" && state.isToolRequired() && hardness < 50.0F)
+            	if(type == "hammer" && state.isToolRequired() && okToBreak)
             	{
             		if(playerIn.isUsingEffectiveTool(state))
             		{
