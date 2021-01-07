@@ -11,79 +11,102 @@ import com.kwpugh.emerald_tools.items.ModShovel;
 import com.kwpugh.emerald_tools.items.ModSword;
 import com.kwpugh.emerald_tools.items.areatools.ModExcavator;
 import com.kwpugh.emerald_tools.items.areatools.ModHammer;
-import com.kwpugh.emerald_tools.materials.ModArmorMaterials;
-import com.kwpugh.emerald_tools.materials.ModToolMaterials;
+import com.kwpugh.emerald_tools.items.areatools.ModTreeAxe;
+import com.kwpugh.emerald_tools.materials.EmeraldArmorMaterial;
+import com.kwpugh.emerald_tools.materials.EmeraldToolMaterial;
+import com.kwpugh.emerald_tools.materials.ObsidianArmorMaterial;
+import com.kwpugh.emerald_tools.materials.ObsidianToolMaterial;
+import com.kwpugh.emerald_tools.materials.RubyArmorMaterial;
+import com.kwpugh.emerald_tools.materials.RubyToolMaterial;
+import com.kwpugh.emerald_tools.materials.SteelArmorMaterial;
+import com.kwpugh.emerald_tools.materials.SteelToolMaterial;
 
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ItemInit
 {
-	public static final Item EMERALD_SWORD = new ModSword(ModToolMaterials.EMERALD, 3, -2.4F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final ToolMaterial EMERALD_TOOL_MATERIAL = new EmeraldToolMaterial();
+	public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = new EmeraldArmorMaterial();
+	public static final ToolMaterial RUBY_TOOL_MATERIAL = new RubyToolMaterial();
+	public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new RubyArmorMaterial();
+	public static final ToolMaterial STEEL_TOOL_MATERIAL = new SteelToolMaterial();
+	public static final ArmorMaterial STEEL_ARMOR_MATERIAL = new SteelArmorMaterial();
+	public static final ToolMaterial OBSIDIAN_TOOL_MATERIAL = new ObsidianToolMaterial();
+	public static final ArmorMaterial OBSIDIAN_ARMOR_MATERIAL = new ObsidianArmorMaterial();
+	
+	public static final Item EMERALD_SWORD = new ModSword(EMERALD_TOOL_MATERIAL, 3, -2.4F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item EMERALD_BOW = new ModBow((new Item.Settings()).maxDamage(725).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_PICKAXE = new ModPickaxe(ModToolMaterials.EMERALD, 1, -2.8F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_AXE = new ModAxe(ModToolMaterials.EMERALD, 5.0F, -3.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_SHOVEL = new ModShovel(ModToolMaterials.EMERALD, 1.5F, -3.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_HOE = new ModHoe(ModToolMaterials.EMERALD, -3, 0.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_HELMET = new ModArmor(ModArmorMaterials.EMERALD, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_CHESTPLATE = new ModArmor(ModArmorMaterials.EMERALD, EquipmentSlot.CHEST, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_LEGGINGS = new ModArmor(ModArmorMaterials.EMERALD, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_BOOTS = new ModArmor(ModArmorMaterials.EMERALD, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_PICKAXE = new ModPickaxe(EMERALD_TOOL_MATERIAL, 1, -2.8F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_AXE = new ModAxe(EMERALD_TOOL_MATERIAL, 5.0F, -3.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_SHOVEL = new ModShovel(EMERALD_TOOL_MATERIAL, 1.5F, -3.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_HOE = new ModHoe(EMERALD_TOOL_MATERIAL, -3, 0.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_HELMET = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_CHESTPLATE = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_LEGGINGS = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_BOOTS = new ModArmor(EMERALD_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	
 	public static final Item RUBY = new Item((new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_SWORD = new ModSword(ModToolMaterials.RUBY, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_SWORD = new ModSword(RUBY_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item RUBY_BOW = new ModBow((new Item.Settings()).maxDamage(960).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_STEEL_SWORD = new ModSword(ModToolMaterials.RUBY, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_PICKAXE = new ModPickaxe(ModToolMaterials.RUBY, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_AXE = new ModAxe(ModToolMaterials.RUBY, 5.0F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_SHOVEL = new ModShovel(ModToolMaterials.RUBY, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_HOE = new ModHoe(ModToolMaterials.RUBY, -3, 0.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_HELMET = new ModArmor(ModArmorMaterials.RUBY, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_CHESTPLATE  = new ModArmor(ModArmorMaterials.RUBY, EquipmentSlot.CHEST, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_LEGGINGS = new ModArmor(ModArmorMaterials.RUBY, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_BOOTS = new ModArmor(ModArmorMaterials.RUBY, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_STEEL_SWORD = new ModSword(RUBY_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_PICKAXE = new ModPickaxe(RUBY_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_AXE = new ModAxe(RUBY_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_SHOVEL = new ModShovel(RUBY_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_HOE = new ModHoe(RUBY_TOOL_MATERIAL, -3, 0.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_HELMET = new ModArmor(RUBY_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_CHESTPLATE  = new ModArmor(RUBY_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_LEGGINGS = new ModArmor(RUBY_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_BOOTS = new ModArmor(RUBY_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	
 	public static final Item STEEL_INGOT = new Item((new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_SWORD = new ModSword(ModToolMaterials.STEEL, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_SWORD = new ModSword(STEEL_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item STEEL_BOW = new ModBow((new Item.Settings()).maxDamage(512).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_PICKAXE = new ModPickaxe(ModToolMaterials.STEEL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_AXE = new ModAxe(ModToolMaterials.STEEL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_SHOVEL = new ModShovel(ModToolMaterials.STEEL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_HOE = new ModHoe(ModToolMaterials.STEEL, -2, -1.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_HELMET = new ModArmor(ModArmorMaterials.STEEL, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_CHESTPLATE = new ModArmor(ModArmorMaterials.STEEL, EquipmentSlot.CHEST, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_LEGGINGS = new ModArmor(ModArmorMaterials.STEEL, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_BOOTS = new ModArmor(ModArmorMaterials.STEEL, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_PICKAXE = new ModPickaxe(STEEL_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_AXE = new ModAxe(STEEL_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_SHOVEL = new ModShovel(STEEL_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_HOE = new ModHoe(STEEL_TOOL_MATERIAL, -2, -1.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_HELMET = new ModArmor(STEEL_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_CHESTPLATE = new ModArmor(STEEL_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_LEGGINGS = new ModArmor(STEEL_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_BOOTS = new ModArmor(STEEL_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	
-	public static final Item OBSIDIAN_SWORD = new ModSword(ModToolMaterials.OBSIDIAN, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_SWORD = new ModSword(OBSIDIAN_TOOL_MATERIAL, 3, -2.4F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item OBSIDIAN_BOW = new ModBow((new Item.Settings()).maxDamage(650).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_PICKAXE = new ModPickaxe(ModToolMaterials.OBSIDIAN, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_AXE = new ModAxe(ModToolMaterials.OBSIDIAN, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_SHOVEL = new ModShovel(ModToolMaterials.OBSIDIAN, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_HOE = new ModHoe(ModToolMaterials.OBSIDIAN, -2, -1.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_EXCAVATOR = new ModExcavator(ModToolMaterials.OBSIDIAN, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_HAMMER = new ModHammer(ModToolMaterials.OBSIDIAN, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_PAXEL = new ModPaxel(ModToolMaterials.OBSIDIAN, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_HELMET = new ModArmor(ModArmorMaterials.OBSIDIAN, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_CHESTPLATE = new ModArmor(ModArmorMaterials.OBSIDIAN, EquipmentSlot.CHEST, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_LEGGINGS = new ModArmor(ModArmorMaterials.OBSIDIAN, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item OBSIDIAN_BOOTS = new ModArmor(ModArmorMaterials.OBSIDIAN, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_PICKAXE = new ModPickaxe(OBSIDIAN_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_AXE = new ModAxe(OBSIDIAN_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_SHOVEL = new ModShovel(OBSIDIAN_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_HOE = new ModHoe(OBSIDIAN_TOOL_MATERIAL, -2, -1.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));	
+	public static final Item OBSIDIAN_HELMET = new ModArmor(OBSIDIAN_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_CHESTPLATE = new ModArmor(OBSIDIAN_ARMOR_MATERIAL, EquipmentSlot.CHEST, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_LEGGINGS = new ModArmor(OBSIDIAN_ARMOR_MATERIAL, EquipmentSlot.LEGS, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_BOOTS = new ModArmor(OBSIDIAN_ARMOR_MATERIAL, EquipmentSlot.FEET, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 
-	public static final Item EMERALD_EXCAVATOR = new ModExcavator(ModToolMaterials.EMERALD, 1.5F, -3.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_HAMMER = new ModHammer(ModToolMaterials.EMERALD, 1, -2.8F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item EMERALD_PAXEL = new ModPaxel(ModToolMaterials.EMERALD, 5.0F, -3.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_EXCAVATOR = new ModExcavator(ModToolMaterials.RUBY, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_HAMMER = new ModHammer(ModToolMaterials.RUBY, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item RUBY_PAXEL = new ModPaxel(ModToolMaterials.RUBY, 5.0F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_EXCAVATOR = new ModExcavator(ModToolMaterials.STEEL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_HAMMER = new ModHammer(ModToolMaterials.STEEL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_PAXEL = new ModPaxel(ModToolMaterials.STEEL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_EXCAVATOR = new ModExcavator(EMERALD_TOOL_MATERIAL, 1.5F, -3.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_HAMMER = new ModHammer(EMERALD_TOOL_MATERIAL, 1, -2.8F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_PAXEL = new ModPaxel(EMERALD_TOOL_MATERIAL, 5.0F, -3.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item EMERALD_TREEAXE = new ModTreeAxe(EMERALD_TOOL_MATERIAL, 5.0F, -3.0F, new Item.Settings().group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_EXCAVATOR = new ModExcavator(RUBY_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_HAMMER = new ModHammer(RUBY_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_PAXEL = new ModPaxel(RUBY_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item RUBY_TREEAXE = new ModTreeAxe(RUBY_TOOL_MATERIAL, 5.0F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_EXCAVATOR = new ModExcavator(STEEL_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_HAMMER = new ModHammer(STEEL_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_PAXEL = new ModPaxel(STEEL_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_TREEAXE = new ModTreeAxe(STEEL_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_EXCAVATOR = new ModExcavator(OBSIDIAN_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_HAMMER = new ModHammer(OBSIDIAN_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_PAXEL = new ModPaxel(OBSIDIAN_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item OBSIDIAN_TREEAXE = new ModTreeAxe(OBSIDIAN_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	
 	static boolean enableHammers = EmeraldTools.CONFIG.GENERAL.enableHammers;
 	static boolean enableExcavators = EmeraldTools.CONFIG.GENERAL.enableExcavators;
 	static boolean enablePaxels = EmeraldTools.CONFIG.GENERAL.enablePaxels;
+	static boolean enableTreeAxes = EmeraldTools.CONFIG.GENERAL.enableTreeAxes;
 	
 	static boolean enableEmerald = EmeraldTools.CONFIG.GENERAL.enableEmeraldSet;
 	static boolean enableRuby = EmeraldTools.CONFIG.GENERAL.enableRubySet;
@@ -174,6 +197,13 @@ public class ItemInit
 			 Registry.register(Registry.ITEM, new Identifier(EmeraldTools.MOD_ID, "steel_paxel"), STEEL_PAXEL);
 			 Registry.register(Registry.ITEM, new Identifier(EmeraldTools.MOD_ID, "obsidian_paxel"), OBSIDIAN_PAXEL);
 		 }		 
+		 
+		 if(enableTreeAxes)
+		 {
+			 Registry.register(Registry.ITEM, new Identifier(EmeraldTools.MOD_ID, "emerald_treeaxe"), EMERALD_TREEAXE);
+			 Registry.register(Registry.ITEM, new Identifier(EmeraldTools.MOD_ID, "ruby_treeaxe"), RUBY_TREEAXE);
+			 Registry.register(Registry.ITEM, new Identifier(EmeraldTools.MOD_ID, "steel_treeaxe"), STEEL_TREEAXE);
+			 Registry.register(Registry.ITEM, new Identifier(EmeraldTools.MOD_ID, "obsidian_treeaxe"), OBSIDIAN_TREEAXE);	 
+		 }	 
 	 }	 
 }
-

@@ -8,11 +8,8 @@
   "item.emerald_tools.emerald_excavator": "Emerald Excavator",
   "item.emerald_tools.emerald_hammer": "Emerald Hammer",
   "item.emerald_tools.emerald_paxel": "Emerald Paxel",
-  
-  "item.emerald_tools.excavator.tip1": "A 3x3 Shovel",
-  "item.emerald_tools.hammer.tip1": "A 3x3 Pickaxe",
-  "item.emerald_tools.paxel.tip1": "Combines an Axe, Shovel, and Pickaxe",
-       
+  "item.emerald_tools.emerald_treeaxe": "Emerald Tree Axe",
+         
   "item.emerald_tools.ruby": "Ruby",
   "item.emerald_tools.ruby_block": "Ruby Block",
   "block.emerald_tools.ruby_block": "Ruby Block",
@@ -27,6 +24,7 @@
   "item.emerald_tools.ruby_excavator": "Ruby Excavator",
   "item.emerald_tools.ruby_hammer": "Ruby Hammer",
   "item.emerald_tools.ruby_paxel": "Ruby Paxel",
+  "item.emerald_tools.ruby_treeaxe": "Ruby Tree Axe",
 
   "item.emerald_tools.obsidian_sword": "Obsidian Sword",
   "item.emerald_tools.obsidian_bow": "Obsidian Bow",
@@ -37,6 +35,7 @@
   "item.emerald_tools.obsidian_excavator": "Obsidian Excavator",
   "item.emerald_tools.obsidian_hammer": "Obsidian Hammer",
   "item.emerald_tools.obsidian_paxel": "Obsidian Paxel",
+  "item.emerald_tools.obsidian_treeaxe": "Obsidian Tree Axe",
 
   "item.emerald_tools.steel_ingot": "Steel Ingot", 
   "item.emerald_tools.steel_block": "Steel Block",
@@ -51,7 +50,13 @@
   "item.emerald_tools.steel_excavator": "Steel Excavator",
   "item.emerald_tools.steel_hammer": "Steel Hammer",
   "item.emerald_tools.steel_paxel": "Steel Paxel",
+  "item.emerald_tools.steel_treeaxe": "Steel Tree Axe",
  
+  "item.emerald_tools.excavator.tip1": "A 3x3 Shovel",
+  "item.emerald_tools.hammer.tip1": "A 3x3 Pickaxe",
+  "item.emerald_tools.paxel.tip1": "Combines an Axe, Shovel, and Pickaxe",
+  "item.emerald_tools.treeaxe.tip1": "Will attempt to bring down a whole tree",
+  
   "item.emerald_tools.emerald_helmet": "Emerald Helmet",
   "item.emerald_tools.emerald_chestplate": "Emerald Chestplate",
   "item.emerald_tools.emerald_leggings": "Emerald Leggings",
