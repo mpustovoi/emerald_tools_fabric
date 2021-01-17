@@ -8,8 +8,6 @@ import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
@@ -18,56 +16,52 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 
-public class AreaToolUtil
-{	
-    public static void attemptBreakNeighbors(World world, PlayerEntity player, int radius, String type, boolean obsidian)
+public class OldAreaToolUtil
+{
+    public static void attemptBreakNeighbors(World world, PlayerEntity playerIn, int radius, String type, boolean obsidian)
     {
         if(!world.isClient)
         {
         	boolean okToBreak;
-            List<BlockPos> targetBlocks = calcRay(world, player, radius);
+            List<BlockPos> targetBlocks = calcRayTrace(world, playerIn, radius);
             
             for(BlockPos pos : targetBlocks)
             {
             	BlockState state = world.getBlockState(pos);
-            	Block block = state.getBlock();
             	Float hardness = state.getHardness(world, pos);
+            	Block block = state.getBlock();
             	okToBreak = obsidian ? true : hardness < 50.0F;
-            	Hand hand = player.getActiveHand();
-            	ItemStack stack = player.getStackInHand(hand);
             	
-             	if(type == "hammer" && state.isToolRequired() && okToBreak)
+            	if(type == "hammer" && state.isToolRequired() && okToBreak)
             	{
-            		if(player.isUsingEffectiveTool(state))
+            		if(playerIn.isUsingEffectiveTool(state))
             		{
             			if(!block.hasBlockEntity() || 
                 				!(block instanceof BlockWithEntity) || 
                 				!(block instanceof BlockEntityProvider))
                 		{
-        					world.breakBlock(pos, false);
-        					Block.dropStacks(state, world, pos, null, player, stack);   // USe this version to account for enchantments on stack        			
+                			world.breakBlock(pos, true); 
                 		}
             		}          		
             	}
              	
             	if(type == "excavator")
             	{
-            		if(player.isUsingEffectiveTool(state))
+            		if(playerIn.isUsingEffectiveTool(state))
             		{
             			if(!block.hasBlockEntity() || 
                 				!(block instanceof BlockWithEntity) || 
                 				!(block instanceof BlockEntityProvider))
                 		{
-            				world.breakBlock(pos, false);
-        					Block.dropStacks(state, world, pos, null, player, stack);   // USe this version to account for enchantments on stac
+                			world.breakBlock(pos, true); 
                 		}
             		}           		
-            	}                             
+            	}                                  
             }
         }
     }
        
-    public static List<BlockPos> calcRay(World world, PlayerEntity playerIn, int radius)
+    public static List<BlockPos> calcRayTrace(World world, PlayerEntity playerIn, int radius)
     {
     	/* 
     	 * Adapted from "Vanilla Hammers" by Draylar - credit to the author
