@@ -12,7 +12,7 @@ import net.minecraft.sound.SoundEvents;
 public class ObsidianArmorMaterial implements ArmorMaterial
 {
 	private static int durabilityMultiplier = EmeraldTools.CONFIG.GENERAL.obsidianDurabilityMultiplier;
-	private static int enchantability = EmeraldTools.CONFIG.GENERAL.obsidianEnchantability;
+	private static int enchantability = EmeraldTools.CONFIG.GENERAL.obsidianArmorEnchantability;
 	private static float toughness = EmeraldTools.CONFIG.GENERAL.obsidianToughness;
 	private static float knochback = EmeraldTools.CONFIG.GENERAL.obsidianKnockbackResistance;
 	

@@ -12,7 +12,7 @@ import net.minecraft.sound.SoundEvents;
 public class SteelArmorMaterial implements ArmorMaterial
 {
 	private static int durabilityMultiplier = EmeraldTools.CONFIG.GENERAL.steelDurabilityMultiplier;
-	private static int enchantability = EmeraldTools.CONFIG.GENERAL.steelEnchantability;
+	private static int enchantability = EmeraldTools.CONFIG.GENERAL.steelArmorEnchantability;
 	private static float toughness = EmeraldTools.CONFIG.GENERAL.steelToughness;
 	private static float knochback = EmeraldTools.CONFIG.GENERAL.steelKnockbackResistance;
 	

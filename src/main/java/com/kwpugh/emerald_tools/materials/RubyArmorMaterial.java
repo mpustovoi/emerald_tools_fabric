@@ -12,7 +12,7 @@ import net.minecraft.sound.SoundEvents;
 public class RubyArmorMaterial implements ArmorMaterial
 {
 	private static int durabilityMultiplier = EmeraldTools.CONFIG.GENERAL.rubyDurabilityMultiplier;
-	private static int enchantability = EmeraldTools.CONFIG.GENERAL.rubyEnchantability;
+	private static int enchantability = EmeraldTools.CONFIG.GENERAL.rubyArmorEnchantability;
 	private static float toughness = EmeraldTools.CONFIG.GENERAL.rubyToughness;
 	private static float knochback = EmeraldTools.CONFIG.GENERAL.rubyKnockbackResistance;
 	
