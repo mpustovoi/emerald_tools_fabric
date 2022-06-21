@@ -4,6 +4,7 @@ import com.kwpugh.emerald_tools.EmeraldTools;
 import com.kwpugh.emerald_tools.items.*;
 import com.kwpugh.emerald_tools.items.areatools.ModExcavator;
 import com.kwpugh.emerald_tools.items.areatools.ModHammer;
+import com.kwpugh.emerald_tools.items.areatools.ModHammerCrude;
 import com.kwpugh.emerald_tools.items.areatools.ModTreeAxe;
 import com.kwpugh.emerald_tools.items.special.AmethystBow;
 import com.kwpugh.emerald_tools.items.special.AmethystHoe;
@@ -96,7 +97,7 @@ public class ItemInit
 	public static final Item STEEL_SHOVEL = new ModShovel(STEEL_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item STEEL_HOE = new ModHoe(STEEL_TOOL_MATERIAL, -2, -1.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item STEEL_EXCAVATOR = new ModExcavator(STEEL_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item STEEL_HAMMER = new ModHammer(STEEL_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item STEEL_HAMMER = new ModHammerCrude(STEEL_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item STEEL_PAXEL = new ModPaxel(STEEL_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item STEEL_TREEAXE = new ModTreeAxe(STEEL_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item STEEL_HELMET = new ModArmor(STEEL_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
@@ -126,7 +127,7 @@ public class ItemInit
 	public static final Item COPPER_SHOVEL = new ModShovel(COPPER_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item COPPER_HOE = new ModHoe(COPPER_TOOL_MATERIAL, -2, -1.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item COPPER_EXCAVATOR = new ModExcavator(COPPER_TOOL_MATERIAL, 1.5F, -3.0F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
-	public static final Item COPPER_HAMMER = new ModHammer(COPPER_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
+	public static final Item COPPER_HAMMER = new ModHammerCrude(COPPER_TOOL_MATERIAL, 1, -2.8F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item COPPER_PAXEL = new ModPaxel(COPPER_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item COPPER_TREEAXE = new ModTreeAxe(COPPER_TOOL_MATERIAL, 6.0F, -3.1F, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));
 	public static final Item COPPER_HELMET = new ModArmor(COPPER_ARMOR_MATERIAL, EquipmentSlot.HEAD, (new Item.Settings()).group(EmeraldTools.EMERALD_TOOLS_GROUP));

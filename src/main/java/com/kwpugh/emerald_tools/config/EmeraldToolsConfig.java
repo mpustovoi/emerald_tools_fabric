@@ -17,6 +17,17 @@ public class EmeraldToolsConfig extends PartitioningSerializer.GlobalData
 				+"\n"
 				+"\n"
 				+"******************************"
+				+"\nBow Zoom Multiplier"
+				+"\n- vanilla bow value = .15F"
+				+"\n- pretty good value = .45F"
+				+"\n- awesome value = .75F"
+				+"\n******************************")
+		public float bowZoomMultiplier = .45F;
+
+		@Comment("\n"
+				+"\n"
+				+"\n"
+				+"******************************"
 				+"\nCrafting Grid Repair"
 				+"\n- repair amount per item"
 				+"\n******************************")
@@ -71,7 +82,7 @@ public class EmeraldToolsConfig extends PartitioningSerializer.GlobalData
     	public int copperDurability = 250;
        	public float copperMiningSpeed = 5.5F;
        	public float copperAttackDamage = 1.5F;
-       	public int copperMiningLevel = 3;
+       	public int copperMiningLevel = 2;
        	public int copperEnchantability = 18;
 
       	@Comment("\n"
@@ -153,7 +164,7 @@ public class EmeraldToolsConfig extends PartitioningSerializer.GlobalData
     	public int steelDurability = 512;
        	public float steelMiningSpeed = 7.0F;
        	public float steelAttackDamage = 2.0F;
-       	public int steelMiningLevel = 3;
+       	public int steelMiningLevel = 2;
        	public int steelEnchantability = 9;
 
        	@Comment("\n"
