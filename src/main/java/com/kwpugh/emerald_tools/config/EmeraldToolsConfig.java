@@ -28,6 +28,18 @@ public class EmeraldToolsConfig extends PartitioningSerializer.GlobalData
 				+"\n"
 				+"\n"
 				+"******************************"
+				+"\nGlobal Gem Bow Settings"
+				+"\n******************************")
+		public float projectileSpeed = 3.0F;
+		public float projectileDivergence = 0.0F;
+		public float projectileRoll = 0.0F;
+		public double projectilePowerDamageBonus = 0.50D;
+		public double projectileExtraDamage = 0.0D;
+
+		@Comment("\n"
+				+"\n"
+				+"\n"
+				+"******************************"
 				+"\nCrafting Grid Repair"
 				+"\n- repair amount per item"
 				+"\n******************************")
